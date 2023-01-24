@@ -711,6 +711,128 @@
         }
       }
     },
+    "lib/openzeppelin-contracts/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1674058167743,
+      "contentHash": "dfcaf7dbfd7a80424d68eb935b3f55bf",
+      "sourceName": "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts\\utils/Context.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "Ownable": {
+          "0.8.17+commit.8df45f5f.Windows.msvc": "Ownable.sol\\Ownable.json"
+        }
+      }
+    },
+    "lib/openzeppelin-contracts/contracts/utils/Context.sol": {
+      "lastModificationDate": 1674058168267,
+      "contentHash": "e7f98c33ad1d39d8a6661bf0804fae36",
+      "sourceName": "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "Context": {
+          "0.8.17+commit.8df45f5f.Windows.msvc": "Context.sol\\Context.json"
+        }
+      }
+    },
+    "lib/openzeppelin-contracts/contracts/utils/math/SafeMath.sol": {
+      "lastModificationDate": 1674058232698,
+      "contentHash": "162ccf43242f3d61992c57425c5829cf",
+      "sourceName": "lib/openzeppelin-contracts/contracts/utils/math/SafeMath.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "SafeMath": {
+          "0.8.17+commit.8df45f5f.Windows.msvc": "SafeMath.sol\\SafeMath.json"
+        }
+      }
+    },
     "script/Counter.s.sol": {
       "lastModificationDate": 1674057512827,
       "contentHash": "0705c52104730a78aef4aa6694175c81",
@@ -764,10 +886,99 @@
         }
       }
     },
-    "src/Counter.sol": {
-      "lastModificationDate": 1674057512827,
-      "contentHash": "ae6c800a2b4c57768024d6e9423d39e8",
-      "sourceName": "src/Counter.sol",
+    "src/Vault.sol": {
+      "lastModificationDate": 1674486342624,
+      "contentHash": "6704905e8995801019c7b60054fa7bf2",
+      "sourceName": "src/Vault.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts\\access/Ownable.sol",
+        "lib/openzeppelin-contracts/contracts\\utils/Context.sol",
+        "lib/openzeppelin-contracts/contracts\\utils/math/SafeMath.sol",
+        "src\\account\\Account.sol",
+        "src\\interfaces\\IVault.sol",
+        "src\\reward\\IERC20.sol"
+      ],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "Vault": {
+          "0.8.17+commit.8df45f5f.Windows.msvc": "Vault.sol\\Vault.json"
+        }
+      }
+    },
+    "src/account/Account.sol": {
+      "lastModificationDate": 1674224015533,
+      "contentHash": "7c54e91aa7c326f4dd4be406311e5bc3",
+      "sourceName": "src/account/Account.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src\\reward\\IERC20.sol"
+      ],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "Account": {
+          "0.8.17+commit.8df45f5f.Windows.msvc": "Account.sol\\Account.json"
+        }
+      }
+    },
+    "src/interfaces/IVault.sol": {
+      "lastModificationDate": 1674282618629,
+      "contentHash": "db2f62397aab0db18075209c7b4722e9",
+      "sourceName": "src/interfaces/IVault.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -799,15 +1010,187 @@
       "imports": [],
       "versionRequirement": "^0.8.13",
       "artifacts": {
-        "Counter": {
-          "0.8.17+commit.8df45f5f.Windows.msvc": "Counter.sol\\Counter.json"
+        "IVault": {
+          "0.8.17+commit.8df45f5f.Windows.msvc": "IVault.sol\\IVault.json"
         }
       }
     },
-    "test/Counter.t.sol": {
-      "lastModificationDate": 1674057512827,
-      "contentHash": "b1a6521ba9c61d5266bab1fc9a057d68",
-      "sourceName": "test/Counter.t.sol",
+    "src/reward/ERC20.sol": {
+      "lastModificationDate": 1674224406769,
+      "contentHash": "9d33d61aac0bc7f3b538d9fd84edff21",
+      "sourceName": "src/reward/ERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts\\utils/Context.sol",
+        "src\\reward\\IERC20.sol",
+        "src\\reward\\IERC20Metadata.sol"
+      ],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "ERC20": {
+          "0.8.17+commit.8df45f5f.Windows.msvc": "ERC20.sol\\ERC20.json"
+        }
+      }
+    },
+    "src/reward/IERC20.sol": {
+      "lastModificationDate": 1674178885129,
+      "contentHash": "31d57aba8d4d7161f578b233960e5452",
+      "sourceName": "src/reward/IERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "IERC20": {
+          "0.8.17+commit.8df45f5f.Windows.msvc": "IERC20.sol\\IERC20.json"
+        }
+      }
+    },
+    "src/reward/IERC20Metadata.sol": {
+      "lastModificationDate": 1674179677924,
+      "contentHash": "9d4c24aa591d8b8a3ce75c19fcb31b17",
+      "sourceName": "src/reward/IERC20Metadata.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src\\reward\\IERC20.sol"
+      ],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "IERC20Metadata": {
+          "0.8.17+commit.8df45f5f.Windows.msvc": "IERC20Metadata.sol\\IERC20Metadata.json"
+        }
+      }
+    },
+    "src/reward/RewardToken.sol": {
+      "lastModificationDate": 1674228739838,
+      "contentHash": "a9dd7296ccad0b5bb794f13281b6c98d",
+      "sourceName": "src/reward/RewardToken.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts\\utils/Context.sol",
+        "src\\account\\Account.sol",
+        "src\\reward\\ERC20.sol",
+        "src\\reward\\IERC20.sol",
+        "src\\reward\\IERC20Metadata.sol"
+      ],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "RewardToken": {
+          "0.8.17+commit.8df45f5f.Windows.msvc": "RewardToken.sol\\RewardToken.json"
+        }
+      }
+    },
+    "test/Vault.t.sol": {
+      "lastModificationDate": 1674486402335,
+      "contentHash": "9e8395bf0c58a4cf0db70dcf3d83a051",
+      "sourceName": "test/Vault.t.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -852,12 +1235,21 @@
         "lib/forge-std/src/console.sol",
         "lib/forge-std/src/console2.sol",
         "lib/forge-std/src/interfaces/IMulticall3.sol",
-        "src\\Counter.sol"
+        "lib/openzeppelin-contracts/contracts\\access/Ownable.sol",
+        "lib/openzeppelin-contracts/contracts\\utils/Context.sol",
+        "lib/openzeppelin-contracts/contracts\\utils/math/SafeMath.sol",
+        "src\\Vault.sol",
+        "src\\account\\Account.sol",
+        "src\\interfaces\\IVault.sol",
+        "src\\reward\\ERC20.sol",
+        "src\\reward\\IERC20.sol",
+        "src\\reward\\IERC20Metadata.sol",
+        "src\\reward\\RewardToken.sol"
       ],
-      "versionRequirement": "^0.8.13",
+      "versionRequirement": "=0.8.17",
       "artifacts": {
-        "CounterTest": {
-          "0.8.17+commit.8df45f5f.Windows.msvc": "Counter.t.sol\\CounterTest.json"
+        "VaultTest": {
+          "0.8.17+commit.8df45f5f.Windows.msvc": "Vault.t.sol\\VaultTest.json"
         }
       }
     }

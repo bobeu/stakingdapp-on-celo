@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-import "openzeppelin-contracts/token/ERC20/IERC20.sol";
+import "../reward/IERC20.sol";
 
 contract Account {
   error UnAuthorizedCaller(address);
@@ -14,6 +14,7 @@ contract Account {
 
   constructor(address _owner, IERC20 _rewardToken) {
     owner = _owner;
+    rewardToken = _rewardToken;
   }
   
   //Fallback
@@ -36,7 +37,7 @@ contract Account {
 
   ///@dev Withdraw reward token 
   function withdrawalERC20(uint amount) public onlyOwner {
-    require(IERC20(rewardToken).balanceOf(address(thi)) >= amount, "insufficient balance");
-    require(IERC20(rewardToken).tansfer(owner, amount), "Failed");
+    require(IERC20(rewardToken).balanceOf(address(this)) >= amount, "insufficient balance");
+    require(IERC20(rewardToken).transfer(owner, amount), "Failed");
   } 
 }
