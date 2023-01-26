@@ -76,7 +76,6 @@ contract Vault is IVault, Ownable{
         vault[roundId].push(Staker(
             _now(),
             msg.value,
-            0,
             msg.sender
         ));
 
@@ -157,7 +156,7 @@ contract Vault is IVault, Ownable{
         return accounts[msg.sender];
     }
 
-    function getStakeProfile(uint roundId, uint stakeId) public view returns(Staker memory stk) {
+    function getProfile(uint roundId, uint stakeId) public view returns(Staker memory stk) {
         stk = vault[roundId][stakeId];
         return stk;
     }

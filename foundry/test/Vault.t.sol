@@ -16,14 +16,15 @@ contract VaultTest is Test {
     uint roundId;
     uint stakeId;
   }
-p-on-celo\foundry> forge create --rpc-url https://alfajores-forno.celo-testnet.org --constructor-args 10000000000000000000 2 --private-key dc9d366572e372bb47267078e1c527bee0024327e7f33dfaa482036d1f3ed129 src/Vault.sol:Vault
-[⠰] Compiling...
-No files changed, compilation skipped
-Deployer: 0xA7B2387bF4C259e188751B46859fcA7E2043FEFD
-Deployed to: 0x346Ab06EDeB0f143fe7A3FBe24a78639B7F626f7
-Transaction hash: 0x5f20ab5838f3710de8e2c2bed9a24b8e11bb25a4a6fa9004e55d2f69e4029c72
-PS C:\Users\FVO_MMILLLER\Desktop\hackathons\stakingdapp-on-celo\foundry>
+// p-on-celo\foundry> forge create --rpc-url https://alfajores-forno.celo-testnet.org --constructor-args 10000000000000000000 2 --private-key dc9d366572e372bb47267078e1c527bee0024327e7f33dfaa482036d1f3ed129 src/Vault.sol:Vault
+// [⠰] Compiling...
+// No files changed, compilation skipped
+// Deployer: 0xA7B2387bF4C259e188751B46859fcA7E2043FEFD
+// Deployed to: 0x346Ab06EDeB0f143fe7A3FBe24a78639B7F626f7
+// Transaction hash: 0x5f20ab5838f3710de8e2c2bed9a24b8e11bb25a4a6fa9004e55d2f69e4029c72
+// PS C:\Users\FVO_MMILLLER\Desktop\hackathons\stakingdapp-on-celo\foundry>
 // forge create --rpc-url https://alfajores-forno.celo-testnet.org --constructor-args 10000000000000000000 2 --private-key dc9d366572e372bb47267078e1c527bee0024327e7f33dfaa482036d1f3ed129 src/RewardToken.sol:RewardToke
+  
   mapping(uint => Ids) public stakeInfo;
 
   function setUp() public {
@@ -47,7 +48,7 @@ PS C:\Users\FVO_MMILLLER\Desktop\hackathons\stakingdapp-on-celo\foundry>
 
     Ids memory ids = stakeInfo[stakeCounter];
     // uint round = vault.currentRound();
-    IVault.Staker memory stk = vault.getStakeProfile(ids.roundId, ids.stakeId);
+    IVault.Staker memory stk = vault.getProfile(ids.roundId, ids.stakeId);
     assertEq(ids.roundId, 1);
     assertEq(stk.user, address(this));
     assertEq(stk.depositTime, depositTime);

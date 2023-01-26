@@ -1,13 +1,20 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import React from 'react';
+import "../styles/global.css";
+import App from '../components/App';
+import Home from "../components/Home";
+import Layout from '../components/Layout';
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">About</Link>
-    </p>
-  </Layout>
-)
+export const index = () => {
+  const [isUserAuthenticated, setAuthentication] = React.useState<boolean>(false);
+  const setauthentication = (x:boolean) => setAuthentication(x);
 
-export default IndexPage
+  return (
+    <React.Fragment>
+      <Layout isUserAuthenticated={isUserAuthenticated} setauthentication={setAuthentication}>
+        {
+          !isUserAuthenticated ? <Home /> : <App />
+        }
+      </Layout>
+    </React.Fragment>
+  )
+}

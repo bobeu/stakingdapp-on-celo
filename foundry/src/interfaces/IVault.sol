@@ -6,7 +6,6 @@ interface IVault {
   struct Staker {
       uint depositTime;
       uint celoAmount;
-      uint pendingWithdrawals;
       address user;
   }
 
