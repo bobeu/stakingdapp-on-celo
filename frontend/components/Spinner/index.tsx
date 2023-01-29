@@ -1,7 +1,9 @@
 import * as React from "react";
+import { SpinnerProps } from "@/interfaces";
 
 // <!-- By Sam Herbert (@sherb), for everyone. More @ http://goo.gl/7AJzbL -->
-export function Spinner({ color, ...rest }) {
+export function Spinner(props: SpinnerProps) {
+  const { color, ...rest } = props;
   return (
     <svg
       width="38"

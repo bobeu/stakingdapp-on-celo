@@ -88,3 +88,8 @@ export const transactionResult :TransactionResultProps = {
   },
   readResult: MockProfile
 }
+
+export interface SpinnerProps {
+  color: string;
+  rest?: React.CSSProperties
+}
