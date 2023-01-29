@@ -177,8 +177,7 @@ export default function App(props: AppProps) {
           }}
         >
           <Avatar sx={{ m: 1,  }}>
-            <Image src='/celologopng.png' width={100} height={100} alt='celoLogo'/>
-            {/* <img /> */}
+            <Image src='/celologopng.png' width={100} height={40} alt='celoLogo'/>
           </Avatar>
           <Typography component="h1" variant="h5">
             Stake <span style={{color: 'blue'}}>$</span>Celo - Earn <span style={{color: 'green'}}>$</span>RTK
