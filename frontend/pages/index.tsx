@@ -12,7 +12,7 @@ export default function Home() {
   const toggleAuthenticating = () => setAuthenticating(!isAuthenticating);
 
   return (
-    <>
+    <div style={{background: 'rgb(2, 2, 3)'}}>
       {
         !isUserAuthenticated ? <LandingPage
           isAuthenticating={isAuthenticating}
@@ -22,6 +22,6 @@ export default function Home() {
           setAccount={setaccount}
         /> : <App account={account} />
       }
-    </>
+    </div>
   )
 }
