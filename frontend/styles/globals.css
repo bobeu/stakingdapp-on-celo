@@ -87,14 +87,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
-  
-  /* linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    ) */
-    /* rgb(var(--background-start-rgb)); */
+  background: rgb(2, 2, 3);
 }
 
 a {
@@ -109,63 +102,6 @@ a {
 }
 
 
-
-
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-/* body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  background-color: white;
-} */
-
-ul[class],
-ol[class] {
-  list-style: none;
-}
-
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-article > * + * {
-  margin-top: 1em;
-}
-
 input,
 button,
 textarea,
@@ -173,43 +109,6 @@ select {
   font: inherit;
 }
 
-.ConnectWallet {
-  height: 42px;
-  /* justify: center; */
-  color: rgb(230, 230, 230); 
-  font-size: 12px; 
-  line-height: 16px;
-  padding: 10px; 
-  border-radius: 28px; 
-  font-family: Georgia, serif;
-  font-weight: 15px; 
-  text-decoration: none; 
-  font-style: normal; 
-  font-variant: normal; 
-  text-transform: none;
-  display: flex;
-  background-color: red;
-  
-  background: #1EA454;
-  background: -moz-linear-gradient(left, #1EA454 0%, #67BECB 35%, #2B7551 100%);
-  background: -webkit-linear-gradient(left, #1EA454 0%, #67BECB 35%, #2B7551 100%);
-  background: linear-gradient(to right, #1EA454 0%, #67BECB 35%, #2B7551 100%);
-
-  box-shadow: 0, 1px 10px rgb(0, 0, 0) 5px 5px 15px 5px; 
-  border: 2px solid rgb(151 164 175 / 10%); 
-  display: inline-block;
-  cursor: pointer;
-}
-.ConnectWallet:hover {
-  background: #1C6EA4;
-}
-.ConnectWallet:active {
-  background: #144E75;
-}
-/* 
-.topDiv {
-  background-color: #1C6EA4;
-} */
 
 .lowerDiv {
   margin-top: 50px;
@@ -227,37 +126,6 @@ select {
   font-size: 45px;
   font-family: Georgia, serif;
   text-align: right;
-}
-
-.cardAttribute {
-  border: 1px solid;
-  border-radius: 6px;
-  /* background: #1C6EA4; */
-  margin-top: 50px;
-  height: 100px;
-  /* justify: center; */
-  color: rgb(165, 123, 22); 
-  font-size: 12px; 
-  line-height: 16px;
-  padding: 10px; 
-  border-radius: 28px; 
-  font-family: Georgia, serif;
-
-}
-.cardAttribute h2 {
-  text-align: center;
-  margin: 0px;
-  color: rgb(200, 200, 1); 
-  padding: 3px; 
-}
-
-.cardAttribute:hover {
-  background: #4C4EB2;
-}
-
-.write {
-  font-size: 18px;
-  color: orange;
 }
 
 .funcDiv {
@@ -281,4 +149,11 @@ select {
 }
 .pointer {
   cursor: pointer;
+}
+
+
+.connectButton:hover {
+  background: rgba(var(--card-rgb), 0.1);
+  border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  color: blueviolet
 }

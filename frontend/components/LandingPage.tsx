@@ -60,13 +60,15 @@ export default function LandingPage(props: PageProps) {
               color: 'whitesmoke',
               borderRadius: '6px',
               textAnchor: 'start',
-              '&:hover': {
-                padding: 2,
-                color: purple[900],
-                background: 'whitesmoke',
-                transition: '0.2sec ease-in-out',
-              }
-            }} variant="text" onClick={handleConnect}>
+              // '&:hover': {
+              //   padding: 2,
+              //   color: purple[900],
+              //   background: 'whitesmoke',
+              //   transition: '0.2sec ease-in-out',
+              // }
+            }} variant="text" onClick={handleConnect}
+              className='connectButton'
+            >
               <Typography variant={"h6"} >Connect Wallet</Typography>
             </Button>
           </div>
