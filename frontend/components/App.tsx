@@ -20,6 +20,7 @@ import { ethers } from "ethers";
 import BigNumber from "bignumber.js";
 import { Spinner } from "./Spinner";
 import Web3 from "web3";
+import Image from "next/image";
 
 const theme = createTheme();
 
@@ -176,7 +177,8 @@ export default function App(props: AppProps) {
           }}
         >
           <Avatar sx={{ m: 1,  }}>
-            <img src='/celologopng.png' width={'100%'} height={'100%'}/>
+            <Image src='/celologopng.png' width={100} height={100} alt='celoLogo'/>
+            {/* <img /> */}
           </Avatar>
           <Typography component="h1" variant="h5">
             Stake <span style={{color: 'blue'}}>$</span>Celo - Earn <span style={{color: 'green'}}>$</span>RTK
