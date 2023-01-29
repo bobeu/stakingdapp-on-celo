@@ -10,9 +10,9 @@ export default function Home() {
 
   const setaccount = (x:string) => setAccount(x);
   const toggleAuthenticating = () => setAuthenticating(!isAuthenticating);
-
+  // style={{background: 'rgb(2, 2, 3)'}}
   return (
-    <div style={{background: 'rgb(2, 2, 3)'}}>
+    <div >
       {
         !isUserAuthenticated ? <LandingPage
           isAuthenticating={isAuthenticating}

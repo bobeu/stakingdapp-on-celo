@@ -150,8 +150,8 @@ export default function App(props: AppProps) {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <React.Fragment>
+      {/* <CssBaseline /> */}
       <Container maxWidth='md' component={'main'}>
         <AppBar position="static" sx={{background:'none'}}>
           <Toolbar sx={boxStyle.profile_style}>
@@ -251,6 +251,6 @@ export default function App(props: AppProps) {
         </Box>
       </Container>
       <Footer sx={{ mt: 8, mb: 4 }} />
-    </ThemeProvider>
+    </React.Fragment>
   );
 }
