@@ -211,6 +211,9 @@ select {
 
 .lowerDiv {
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .divHeader{
   display: flex;
@@ -264,4 +267,16 @@ select {
 
 #text {
   color: white;
+}
+
+.disabled:hover,
+.disabled:focus {
+  background: #06f;
+}
+
+.disabled {
+  pointer-events: none;
+}
+.pointer {
+  cursor: pointer;
 }

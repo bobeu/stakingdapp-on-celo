@@ -10,61 +10,49 @@ import "../src/reward/IERC20.sol";
 contract VaultTest is Test {
   Vault public vault;
   RewardToken public token;
-  uint public stakeCounter;
-
-  struct Ids {
-    uint roundId;
-    uint stakeId;
-  }
-// p-on-celo\foundry> forge create --rpc-url https://alfajores-forno.celo-testnet.org --constructor-args 10000000000000000000 2 --private-key dc9d366572e372bb47267078e1c527bee0024327e7f33dfaa482036d1f3ed129 src/Vault.sol:Vault
-// [⠰] Compiling...
-// No files changed, compilation skipped
-// Deployer: 0xA7B2387bF4C259e188751B46859fcA7E2043FEFD
-// Deployed to: 0x346Ab06EDeB0f143fe7A3FBe24a78639B7F626f7
-// Transaction hash: 0x5f20ab5838f3710de8e2c2bed9a24b8e11bb25a4a6fa9004e55d2f69e4029c72
-// PS C:\Users\FVO_MMILLLER\Desktop\hackathons\stakingdapp-on-celo\foundry>
-// forge create --rpc-url https://alfajores-forno.celo-testnet.org --constructor-args 10000000000000000000 2 --private-key dc9d366572e372bb47267078e1c527bee0024327e7f33dfaa482036d1f3ed129 src/RewardToken.sol:RewardToke
-  
-  mapping(uint => Ids) public stakeInfo;
+  uint stakeAmt = 1e20 wei;
 
   function setUp() public {
     uint minimumStaking = 1e19 wei;
     // uint roundInterval = 1 seconds;
     uint maxSupply = 1_000_000_000 * (10**18);
-    vault = new Vault(minimumStaking, 0);
+    vault = new Vault(minimumStaking);
     token = new RewardToken(address(vault), maxSupply);
     vault.setToken(IERC20(token));
   }
   
-  function testStake() public {
-    uint stakeAmt = 1e20 wei;
-    uint depositTime = block.timestamp;
-    (uint roundId, uint stakeId) = vault.stake{value: stakeAmt}();
-    assertEq(roundId, 1);
-    assertEq(stakeId, 0);
-    stakeCounter ++;
-    stakeInfo[stakeCounter] = Ids({roundId: roundId, stakeId: stakeId});
-    address account = vault.getAccount(address(this));
+  receive() external payable {}
 
-    Ids memory ids = stakeInfo[stakeCounter];
-    // uint round = vault.currentRound();
-    IVault.Staker memory stk = vault.getProfile(ids.roundId, ids.stakeId);
-    assertEq(ids.roundId, 1);
-    assertEq(stk.user, address(this));
+  function testStake() public {
+    uint depositTime = block.timestamp;
+    (bool doneStaking) = vault.stake{value: stakeAmt}();
+    assertEq(doneStaking, true);
+
+    IVault.Staker memory stk = vault.getStakeProfile();
     assertEq(stk.depositTime, depositTime);
     assertEq(stk.celoAmount, stakeAmt);
-    if(account == address(0)) revert ("Zero address");
-    assertEq(token.balanceOf(account), 0);
+    if(stk.account == address(0)) revert ("Zero address");
+    assertEq(token.balanceOf(stk.account), 0);
   }
 
   function testUnstake() public {
-    uint stakeAmt = 1e20 wei;
-    (uint roundId, uint stakeId) = vault.stake{value: stakeAmt}();
-    // Ids memory ids = stakeInfo[stakeCounter];
-    require(vault.unstake(roundId, stakeId), "Failed");
-    address account = vault.getAccount(address(this));
-    IVault.Staker memory stk = vault.getStakeProfile(roundId, stakeId);
-    require(token.balanceOf(account) > 0, "Zero token reward");
+    uint initbal = address(this).balance;
+    require(vault.stake{value: stakeAmt}(), "Staking failed");
+    assertEq(address(this).balance, initbal - stakeAmt);
+    require(vault.unstake(), "Failed");
+    IVault.Staker memory stk = vault.getStakeProfile();
+    require(stk.account != address(0), "Zero alc");
+    require(token.balanceOf(stk.account) == 1e15, "Zero token reward");
     assertEq(stk.celoAmount, 0);
+  }
+
+  function testWithdrawal() public {
+    uint initBalance = address(this).balance;
+    require(vault.stake{value: stakeAmt}(), "Staking failed");
+    require(address(this).balance < initBalance, "Error");
+    require(vault.unstake(), "Failed");
+    vault.withdraw();
+    assertEq(address(this).balance, initBalance);
+    require(token.balanceOf(address(this)) > 0, "Zero token reward");
   }
 }

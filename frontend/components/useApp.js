@@ -1,6 +1,6 @@
 import React from "react";
 import { ethers } from "ethers";
-import getAddresses from "./apis/getAddresses";
+import getContractData from "./apis/contractdata";
 
 const alfajores = {
   chainId: "0xAEF3",
@@ -10,17 +10,17 @@ const alfajores = {
 
 // window.document.getElementById('requestPermissionsButton', requestPermissions);
 async function addToken() {
-  const { token } = getAddresses();
+  const { tokenAddr } = getContractData();
+  console.log("TokenAddr", tokenAddr);
 
   try {
     await window.ethereum
-    
     .request({
       method: "wallet_watchAsset",
       params: {
         type: "ERC20",
         // options: {
-          address: token,
+          address: tokenAddr,
           symbol: "RTK",
           decimals: 18,
           image: ""
@@ -63,7 +63,7 @@ async function switchNetwork() {
   return done;
 }
 
-const useQuatre = () => {
+const useApp = () => {
   async function getAccount() {
     let account = "";
     let rejectedRequestError = "";
@@ -71,7 +71,7 @@ const useQuatre = () => {
       await window.ethereum
         .request({ method: "eth_requestAccounts" })
         .then(newAccounts => {
-          if (wallet !== newAccounts[0]) {
+          if (newAccounts[0]) {
             account = newAccounts[0];
           }
         })
@@ -88,6 +88,8 @@ const useQuatre = () => {
 
   async function requestWalletConnectPermissions() {
     let done = false;
+    let address = "";
+
     try {
       await window.ethereum
         .request({
@@ -97,10 +99,10 @@ const useQuatre = () => {
         .then(async permissions => {
           const accountsPermission = permissions.find(permission => permission.parentCapability === "eth_accounts");
           if (accountsPermission) {
-            await window.ethereum._metamask.isUnlocked().then((isUnlocked) => { done = isUnlocked; } );
-          } else {
+            done = true;
             const { account } = await getAccount();
-            if(account) done = true;
+            address = account;
+            // await window.ethereum._metamask.isUnlocked().then((isUnlocked) => { done = isUnlocked; } );
           }
         })
     } catch (error) {
@@ -109,7 +111,7 @@ const useQuatre = () => {
       console.log("Permissions needed to continue.");
       console.error(error);
     }
-    return done;
+    return { done, address };
   }
 
   return {
@@ -119,4 +121,4 @@ const useQuatre = () => {
   };
 };
 
-export default useQuatre;
+export default useApp;

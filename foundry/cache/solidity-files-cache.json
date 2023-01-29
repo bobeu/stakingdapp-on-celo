@@ -12,7 +12,7 @@
   },
   "files": {
     "lib/forge-std/lib/ds-test/src/test.sol": {
-      "lastModificationDate": 1674057425429,
+      "lastModificationDate": 1674108085512,
       "contentHash": "a85cb92e605e48103a5375f81c8233f2",
       "sourceName": "lib/forge-std/lib/ds-test/src/test.sol",
       "solcConfig": {
@@ -52,7 +52,7 @@
       }
     },
     "lib/forge-std/src/Base.sol": {
-      "lastModificationDate": 1674057390498,
+      "lastModificationDate": 1674108083111,
       "contentHash": "2a76a316dab98751b739247982ac8576",
       "sourceName": "lib/forge-std/src/Base.sol",
       "solcConfig": {
@@ -101,7 +101,7 @@
       }
     },
     "lib/forge-std/src/Script.sol": {
-      "lastModificationDate": 1674057390498,
+      "lastModificationDate": 1674108083111,
       "contentHash": "c10ed2980061827d4a5ce78c310ae01b",
       "sourceName": "lib/forge-std/src/Script.sol",
       "solcConfig": {
@@ -153,7 +153,7 @@
       }
     },
     "lib/forge-std/src/StdAssertions.sol": {
-      "lastModificationDate": 1674057390498,
+      "lastModificationDate": 1674108083143,
       "contentHash": "66fe75a7af3292c092e1e9bbcf3c80b3",
       "sourceName": "lib/forge-std/src/StdAssertions.sol",
       "solcConfig": {
@@ -196,7 +196,7 @@
       }
     },
     "lib/forge-std/src/StdChains.sol": {
-      "lastModificationDate": 1674057390498,
+      "lastModificationDate": 1674108083143,
       "contentHash": "b40ea280777a48f5cab9aaae3d56b1a9",
       "sourceName": "lib/forge-std/src/StdChains.sol",
       "solcConfig": {
@@ -238,7 +238,7 @@
       }
     },
     "lib/forge-std/src/StdCheats.sol": {
-      "lastModificationDate": 1674057390514,
+      "lastModificationDate": 1674108083151,
       "contentHash": "cf787d834c54cbea5706ace4389c7572",
       "sourceName": "lib/forge-std/src/StdCheats.sol",
       "solcConfig": {
@@ -284,7 +284,7 @@
       }
     },
     "lib/forge-std/src/StdError.sol": {
-      "lastModificationDate": 1674057390514,
+      "lastModificationDate": 1674108083151,
       "contentHash": "8c35ad419c5b8748575080db5fd58cae",
       "sourceName": "lib/forge-std/src/StdError.sol",
       "solcConfig": {
@@ -324,7 +324,7 @@
       }
     },
     "lib/forge-std/src/StdJson.sol": {
-      "lastModificationDate": 1674057390514,
+      "lastModificationDate": 1674108083151,
       "contentHash": "831bd89e8de8f0fa11c97b86020b07eb",
       "sourceName": "lib/forge-std/src/StdJson.sol",
       "solcConfig": {
@@ -366,7 +366,7 @@
       }
     },
     "lib/forge-std/src/StdMath.sol": {
-      "lastModificationDate": 1674057390514,
+      "lastModificationDate": 1674108083159,
       "contentHash": "fc64b149e462e64dea89f50e9cc0318f",
       "sourceName": "lib/forge-std/src/StdMath.sol",
       "solcConfig": {
@@ -406,7 +406,7 @@
       }
     },
     "lib/forge-std/src/StdStorage.sol": {
-      "lastModificationDate": 1674057390514,
+      "lastModificationDate": 1674108083199,
       "contentHash": "956a40f1cecbf085f687f818356dc22a",
       "sourceName": "lib/forge-std/src/StdStorage.sol",
       "solcConfig": {
@@ -451,7 +451,7 @@
       }
     },
     "lib/forge-std/src/StdUtils.sol": {
-      "lastModificationDate": 1674057390514,
+      "lastModificationDate": 1674108083199,
       "contentHash": "b08b6aca7460f47fbf9237c207d91e30",
       "sourceName": "lib/forge-std/src/StdUtils.sol",
       "solcConfig": {
@@ -494,7 +494,7 @@
       }
     },
     "lib/forge-std/src/Test.sol": {
-      "lastModificationDate": 1674057390514,
+      "lastModificationDate": 1674108083199,
       "contentHash": "bd7c2069e34bb3755c36e7fa434eed8e",
       "sourceName": "lib/forge-std/src/Test.sol",
       "solcConfig": {
@@ -549,7 +549,7 @@
       }
     },
     "lib/forge-std/src/Vm.sol": {
-      "lastModificationDate": 1674057390514,
+      "lastModificationDate": 1674108083199,
       "contentHash": "5e132bc8245638e3c858bbe6766411e0",
       "sourceName": "lib/forge-std/src/Vm.sol",
       "solcConfig": {
@@ -592,7 +592,7 @@
       }
     },
     "lib/forge-std/src/console.sol": {
-      "lastModificationDate": 1674057390530,
+      "lastModificationDate": 1674108083199,
       "contentHash": "c8cf989d04bc2e3069e3d91facf3b69c",
       "sourceName": "lib/forge-std/src/console.sol",
       "solcConfig": {
@@ -632,7 +632,7 @@
       }
     },
     "lib/forge-std/src/console2.sol": {
-      "lastModificationDate": 1674057390530,
+      "lastModificationDate": 1674108083199,
       "contentHash": "f0634a1969c1d0ebfc2ea47dafeafb02",
       "sourceName": "lib/forge-std/src/console2.sol",
       "solcConfig": {
@@ -672,7 +672,7 @@
       }
     },
     "lib/forge-std/src/interfaces/IMulticall3.sol": {
-      "lastModificationDate": 1674057390545,
+      "lastModificationDate": 1674108083214,
       "contentHash": "5de707a0d82c8f56049fbd3ba28944ed",
       "sourceName": "lib/forge-std/src/interfaces/IMulticall3.sol",
       "solcConfig": {
@@ -833,10 +833,10 @@
         }
       }
     },
-    "script/Counter.s.sol": {
-      "lastModificationDate": 1674057512827,
-      "contentHash": "0705c52104730a78aef4aa6694175c81",
-      "sourceName": "script/Counter.s.sol",
+    "script/Vault.s.sol": {
+      "lastModificationDate": 1674537240593,
+      "contentHash": "c8419200ba51086f084c9e7b9d784b82",
+      "sourceName": "script/Vault.s.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -881,14 +881,14 @@
       ],
       "versionRequirement": "^0.8.13",
       "artifacts": {
-        "CounterScript": {
-          "0.8.17+commit.8df45f5f.Windows.msvc": "Counter.s.sol\\CounterScript.json"
+        "VaultScript": {
+          "0.8.17+commit.8df45f5f.Windows.msvc": "Vault.s.sol\\VaultScript.json"
         }
       }
     },
     "src/Vault.sol": {
-      "lastModificationDate": 1674486342624,
-      "contentHash": "6704905e8995801019c7b60054fa7bf2",
+      "lastModificationDate": 1674946001265,
+      "contentHash": "a0f8c8dcc5dcec6274a4d9c1be2f07ec",
       "sourceName": "src/Vault.sol",
       "solcConfig": {
         "settings": {
@@ -923,6 +923,7 @@
         "lib/openzeppelin-contracts/contracts\\utils/Context.sol",
         "lib/openzeppelin-contracts/contracts\\utils/math/SafeMath.sol",
         "src\\account\\Account.sol",
+        "src\\interfaces\\IAccount.sol",
         "src\\interfaces\\IVault.sol",
         "src\\reward\\IERC20.sol"
       ],
@@ -934,8 +935,8 @@
       }
     },
     "src/account/Account.sol": {
-      "lastModificationDate": 1674224015533,
-      "contentHash": "7c54e91aa7c326f4dd4be406311e5bc3",
+      "lastModificationDate": 1674937737073,
+      "contentHash": "d6308123fb8c6e97b02db41dfc23ff24",
       "sourceName": "src/account/Account.sol",
       "solcConfig": {
         "settings": {
@@ -966,6 +967,7 @@
         }
       },
       "imports": [
+        "src\\interfaces\\IAccount.sol",
         "src\\reward\\IERC20.sol"
       ],
       "versionRequirement": "^0.8.13",
@@ -975,9 +977,49 @@
         }
       }
     },
+    "src/interfaces/IAccount.sol": {
+      "lastModificationDate": 1674897097824,
+      "contentHash": "af4984ff5f16422cab3fa9131c2249b4",
+      "sourceName": "src/interfaces/IAccount.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "IAccount": {
+          "0.8.17+commit.8df45f5f.Windows.msvc": "IAccount.sol\\IAccount.json"
+        }
+      }
+    },
     "src/interfaces/IVault.sol": {
-      "lastModificationDate": 1674282618629,
-      "contentHash": "db2f62397aab0db18075209c7b4722e9",
+      "lastModificationDate": 1674927606735,
+      "contentHash": "f2dd8b47c364878a6d6aaad7b59268bb",
       "sourceName": "src/interfaces/IVault.sol",
       "solcConfig": {
         "settings": {
@@ -1008,7 +1050,7 @@
         }
       },
       "imports": [],
-      "versionRequirement": "^0.8.13",
+      "versionRequirement": "=0.8.17",
       "artifacts": {
         "IVault": {
           "0.8.17+commit.8df45f5f.Windows.msvc": "IVault.sol\\IVault.json"
@@ -1176,6 +1218,7 @@
       "imports": [
         "lib/openzeppelin-contracts/contracts\\utils/Context.sol",
         "src\\account\\Account.sol",
+        "src\\interfaces\\IAccount.sol",
         "src\\reward\\ERC20.sol",
         "src\\reward\\IERC20.sol",
         "src\\reward\\IERC20Metadata.sol"
@@ -1188,8 +1231,8 @@
       }
     },
     "test/Vault.t.sol": {
-      "lastModificationDate": 1674486402335,
-      "contentHash": "9e8395bf0c58a4cf0db70dcf3d83a051",
+      "lastModificationDate": 1674946321707,
+      "contentHash": "10e627ea61fd54535bec5bfe10d994c9",
       "sourceName": "test/Vault.t.sol",
       "solcConfig": {
         "settings": {
@@ -1240,6 +1283,7 @@
         "lib/openzeppelin-contracts/contracts\\utils/math/SafeMath.sol",
         "src\\Vault.sol",
         "src\\account\\Account.sol",
+        "src\\interfaces\\IAccount.sol",
         "src\\interfaces\\IVault.sol",
         "src\\reward\\ERC20.sol",
         "src\\reward\\IERC20.sol",

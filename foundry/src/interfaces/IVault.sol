@@ -1,15 +1,15 @@
-// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
 
 interface IVault {
   // Staker's profile data
   struct Staker {
       uint depositTime;
       uint celoAmount;
-      address user;
+      address account;
   }
 
-  function stake() external payable returns(uint, uint);
-  function unstake(uint roundId, uint stakeId) external returns(bool);
+  function stake() external payable returns(bool);
+  function unstake() external returns(bool);
 
 }

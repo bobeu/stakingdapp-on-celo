@@ -1,10 +1,12 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
 import "../reward/IERC20.sol";
+import "../interfaces/IAccount.sol";
 
-contract Account {
+contract Account is IAccount {
   error UnAuthorizedCaller(address);
+  event CeloReceived(uint);
 
   // Owner's address
   address private owner;
@@ -12,14 +14,14 @@ contract Account {
   // Reward token
   IERC20 private rewardToken;
 
-  constructor(address _owner, IERC20 _rewardToken) {
-    owner = _owner;
+  constructor(IERC20 _rewardToken) payable {
+    owner = msg.sender;
     rewardToken = _rewardToken;
   }
   
   //Fallback
   receive() external payable {
-    require(msg.value > 0, "");
+    emit CeloReceived(msg.value);
   }
 
   // Only owner can call when this is invoked
@@ -29,15 +31,15 @@ contract Account {
   }
 
   ///@dev Withdraw Celo of @param amount : amount to withdraw from contract 
-  function withdrawalCelo(uint amount) public onlyOwner {
-    require(address(this).balance >= amount, "insufficient balance");
-    (bool success,) = owner.call{value: amount}("");
-    require(success, "");
+  function withdrawCelo(address to) external onlyOwner {
+    uint balance = address(this).balance;
+    (bool success,) = to.call{value: balance}("");
+    require(success, "withdrawal failed");
   }
 
   ///@dev Withdraw reward token 
-  function withdrawalERC20(uint amount) public onlyOwner {
-    require(IERC20(rewardToken).balanceOf(address(this)) >= amount, "insufficient balance");
-    require(IERC20(rewardToken).transfer(owner, amount), "Failed");
+  function withdrawERC20(address to) external onlyOwner {
+    uint balance = IERC20(rewardToken).balanceOf(address(this));
+    if(balance >  0) require(IERC20(rewardToken).transfer(to, balance), "Failed");
   } 
 }
