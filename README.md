@@ -37,6 +37,15 @@ yarn run dev
 - Demo
 **[Click to interact with Dapp]()**
 
+# Compile contracts
+```bash
+forge build
+```
+
+# Test contracts
+```bash
+forge test
+```
 
 # Deployment information
 - Vault.sol
