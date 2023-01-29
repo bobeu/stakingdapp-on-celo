@@ -22,7 +22,7 @@ For full understanding of the backend, follow **[this tutorial]()**
 git clone https://github.com/bobeu/stakingdapp-on-celo/
 ```
 
-``bash
+```bash
 cd stakingdapp-on-celo/frontend
 ```
 
