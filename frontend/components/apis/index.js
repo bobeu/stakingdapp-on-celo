@@ -70,6 +70,7 @@ async function sendtransaction(options) {
     } catch (error) {
       console.log(error);
       options?.cancelLoading();
+      if(error?.data.code === -32000) alert("Please fund your wallet with test Celo from https://faucet.celo.org")
     }
   return result;
 };

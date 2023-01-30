@@ -21,16 +21,18 @@ export default function LandingPage(props: PageProps) {
   async function handleConnect() {
     if(!isUserAuthenticated) {
       setAuthenticating();
-      const {done, address } = await connectWallet();
-      console.log("Address",address);
-      if(done) {
-        setAccount(address);
+      const result = await connectWallet();
+      console.log("Address", result?.address);
+      if(result?.done) {
+        setAccount(result?.address);
         setAuthenticating();
         setauthentication(true);
-        const switchResult = await switchNetwork();
-        if(switchResult) {
-          await addNativeToken();
-        }
+        await addNativeToken();
+        // const switchResult = await switchNetwork();
+        // if(switchResult) {
+        // }
+      } else {
+        setAuthenticating();
       }
     }
   }
