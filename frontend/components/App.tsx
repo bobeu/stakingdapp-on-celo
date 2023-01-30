@@ -73,7 +73,7 @@ export default function App(props: AppProps) {
 
     getTokenBalance();
     return () => abortProcess.abort();
-  }, [response])
+  }, [response,account]);
 
   const handleContractFunction = (x: string) => setFunctionName(x);
 
