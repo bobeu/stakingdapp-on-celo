@@ -37,6 +37,8 @@ yarn run dev
 - Demo
 **[Click to interact with Dapp](https://stakingdapp2.vercel.app/)**
 
+**[Watch this video to know how to do that](https://youtu.be/8H-tctoES3Q)**
+
 # Compile contracts
 ```bash
 forge build
