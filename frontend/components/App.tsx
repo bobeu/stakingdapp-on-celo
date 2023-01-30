@@ -162,24 +162,28 @@ export default function App(props: AppProps) {
           </Toolbar>
         </AppBar>
       </Container>
-      <Container maxWidth='md' component={'main'}>
-
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center', alignItems:'center', gap:2}}>
+      <Container maxWidth='sm' component={'main'}>
+        <Typography variant="h6" component="div" sx={{ display: 'flex', justifyContent: 'space-around', alignItems:'center'}}>
           <span style={{color: 'green'}}>Connected!:</span> <Address account={account} size={6} copyable display />
         </Typography>
         <Box
           sx={{
             marginTop: 8,
-            display: "flex",
-            flexDirection: "column",
+            display: "grid",
+            // flexDirection: "column",
             alignItems: "center"
           }}
         >
-          <Avatar sx={{ m: 1,  }}>
-            <Image src='/celologopng.png' width={100} height={40} alt='celoLogo'/>
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Stake <span style={{color: 'blue'}}>$</span>Celo - Earn <span style={{color: 'green'}}>$</span>RTK
+          <div className="marquee">
+            <p className='inner' > Mininum staking : 0.1 $CELO </p>
+          </div>
+          <div style={{display: 'flex', justifyContent: 'center'}}>
+            <Avatar sx={{ m: 1,}}>
+              <Image src='/celologopng.png' width={100} height={40} alt='celoLogo'/>
+            </Avatar>
+          </div>
+          <Typography component="h1" variant="h5" sx={{display: 'flex',justifyContent: 'space-around'}}>
+            <span style={{color: 'blue'}}>Stake $ Celo</span> <span style={{color: 'green'}}> Earn $RTK</span>
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <Box
