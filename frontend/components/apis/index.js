@@ -12,7 +12,6 @@ async function sendtransaction(options) {
   if (!isUnlocked) return null;
   
   try {
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
     // Vault contract instance
     const v_contractInstance = new ethers.Contract(vaultAddr, vaultAbi, provider);
     

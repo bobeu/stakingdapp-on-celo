@@ -19,7 +19,7 @@ For full understanding of the backend, follow **[this tutorial]()**
 > Note : Be sure to have metamask browser extension installed in  your browser.
 
 ```bash
-git clone https://github.com/bobeu/stakingdapp-on-celo/
+git clone https://github.com/bobeu/stakingdapp-on-celo.git/
 ```
 
 ```bash
