@@ -26,7 +26,7 @@ const theme = createTheme();
 const boxStyle = {
   profile_style: {
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     alignItems: 'center'
   },
   span_style: {
@@ -36,6 +36,7 @@ const boxStyle = {
   },
   topButton: {
     color: 'whitesmoke',
+    width: 'fit-content'
   }
 }
 
@@ -154,17 +155,17 @@ export default function App(props: AppProps) {
       <Container maxWidth='md' component={'main'}>
         <AppBar position="static" sx={{background:'none'}}>
           <Toolbar sx={boxStyle.profile_style}>
-            <Box sx={boxStyle.profile_style}>
+            {/* <Box sx={boxStyle.profile_style}> */}
               <Button variant="outlined" style={boxStyle.topButton} startIcon='Vault Balance:' endIcon={`${response?.account ? Web3.utils.fromWei(response?.celoAmount?.toString()) : 0} ${' $Celo'}`} />
               <Button variant="outlined" style={boxStyle.topButton} startIcon='Staked time:' endIcon={getTimeFromEpoch(response?.depositTime)} />
               <Button variant="outlined" style={boxStyle.topButton} startIcon='RTK Reward:' endIcon={Web3.utils.fromWei(tokenRewardBalance.toString())} />
-            </Box>
+            {/* </Box> */}
           </Toolbar>
         </AppBar>
       </Container>
       <Container maxWidth='sm' component={'main'}>
         <Typography variant="h6" component="div" sx={{ display: 'flex', justifyContent: 'space-around', alignItems:'center'}}>
-          <span style={{color: 'green'}}>Connected!:</span> <Address account={account} size={6} copyable display />
+          <span style={{color: 'green'}}>Connected!:</span> <Address account={account} size={6} copyable={true} display />
         </Typography>
         <Box
           sx={{

@@ -117,8 +117,10 @@ const useApp = () => {
           if (accountsPermission) {
             done = true;
             const { account } = await getAccount();
-            address = account;
-            if(account) done = await switchNetwork();
+            if(account) {
+              address = account;
+              done = await switchNetwork();
+            }
             // await window.ethereum._metamask.isUnlocked().then((isUnlocked) => { done = isUnlocked; } );
           }
         })

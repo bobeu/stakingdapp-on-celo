@@ -10,7 +10,7 @@ import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 
 export default function LandingPage(props: PageProps) {
-  const { connectWallet, switchNetwork, addNativeToken } = useApp();
+  const { connectWallet, addNativeToken } = useApp();
   const { 
     isUserAuthenticated, 
     setauthentication, 
@@ -23,14 +23,11 @@ export default function LandingPage(props: PageProps) {
       setAuthenticating();
       const result = await connectWallet();
       console.log("Address", result?.address);
-      if(result?.done) {
+      if(result?.done === true) {
         setAccount(result?.address);
         setAuthenticating();
         setauthentication(true);
         await addNativeToken();
-        // const switchResult = await switchNetwork();
-        // if(switchResult) {
-        // }
       } else {
         setAuthenticating();
       }
@@ -62,12 +59,6 @@ export default function LandingPage(props: PageProps) {
               color: 'whitesmoke',
               borderRadius: '6px',
               textAnchor: 'start',
-              // '&:hover': {
-              //   padding: 2,
-              //   color: purple[900],
-              //   background: 'whitesmoke',
-              //   transition: '0.2sec ease-in-out',
-              // }
             }} variant="text" onClick={handleConnect}
               className='connectButton'
             >
